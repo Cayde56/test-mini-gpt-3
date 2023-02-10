@@ -9,14 +9,16 @@ export function ImageVariatiorForm() {
   const [image, setImage] = useState(undefined);
   const [preview, setPreview] = useState("");
   const [imageName, setImageName] = useState("");
-  const { setUrls } = useContext(Context);
+  const { urls, setUrls } = useContext(Context);
   const [imageBase64, setImageBase64] = useState("");
 
   useEffect(() => {
-    if (imageBase64 !== "") {
-      setUrls(Array(10).fill(`data:image/png;base64,${imageBase64}`));
+    if (urls.length !== 0) {
+      return setUrls([]);
     }
-    setImageName(cutFilename(imageName));
+    if (imageBase64 !== "")
+      setUrls(Array(10).fill(`data:image/png;base64,${imageBase64}`));
+    if (imageName !== "") setImageName(cutFilename(imageName));
   }, [imageBase64, imageName]);
 
   const cutFilename = (filename) => {

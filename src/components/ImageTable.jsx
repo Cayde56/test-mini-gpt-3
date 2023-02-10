@@ -9,38 +9,38 @@ function ImageTable() {
       <tbody>
         <tr>
           <td>
-            <img src={urls[0]} />
+            {urls[0] && <img src={urls[0]} />}
           </td>
           <td>
-            <img src={urls[1]} />
+            {urls[1] && <img src={urls[1]} />}
           </td>
           <td>
-            <img src={urls[2]} />
+            {urls[2] && <img src={urls[2]} />}
           </td>
           <td>
-            <img src={urls[3]} />
+            {urls[3] && <img src={urls[3]} />}
           </td>
           <td>
-            <img src={urls[4]} />
+            {urls[4] && <img src={urls[4]} />}
           </td>
         </tr>
       </tbody>
       <tbody>
         <tr>
           <td>
-            <img src={urls[5]} />
+            {urls[5] && <img src={urls[5]} />}
           </td>
           <td>
-            <img src={urls[6]} />
+            {urls[6] && <img src={urls[6]} />}
           </td>
           <td>
-            <img src={urls[7]} />
+            {urls[7] && <img src={urls[7]} />}
           </td>
           <td>
-            <img src={urls[8]} />
+            {urls[8] && <img src={urls[8]} />}
           </td>
           <td>
-            <img src={urls[9]} />
+            {urls[9] && <img src={urls[9]} />}
           </td>
         </tr>
       </tbody>

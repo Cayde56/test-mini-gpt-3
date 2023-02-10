@@ -13,8 +13,14 @@ function Root() {
         <Routes>
           <Route index element={<Traductor />} />
           <Route path="/test-mini-gpt-3/" element={<Traductor />} />
-          <Route path="/test-mini-gpt-3/image" element={<ImageVariatiorForm />}/>
-          <Route path="/test-mini-gpt-3/contact" element={<div>Contact us</div>}/>
+          <Route
+            path="/test-mini-gpt-3/image"
+            element={<ImageVariatiorForm />}
+          />
+          <Route
+            path="/test-mini-gpt-3/contact"
+            element={<div>Contact us</div>}
+          />
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
       </BrowserRouter>

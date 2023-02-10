@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Cayde56.github.io/test-mini-gpt-3",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
