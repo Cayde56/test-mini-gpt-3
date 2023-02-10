@@ -1,27 +1,23 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Traductor } from "../pages/Traductor";
+import { ImageVariatiorForm } from "../pages/ImageVariatorForm";
 import { Navbar } from "../components/Navbar";
-import { Traductor } from "../components/Traductor";
-import { ImageVariatiorForm } from "../components/ImageVariatorForm";
-import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
-import ErrorPage from "../ErrorPage";
+import { ErrorPage } from "../pages/ErrorPage";
 import "../index.css";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Traductor />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/image",
-    element: <ImageVariatiorForm />,
-  },
-]);
 
 function Root() {
   return (
     <>
-      <Navbar />
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route index element={<Traductor />} />
+          <Route path="/test-mini-gpt-3/" element={<Traductor />} />
+          <Route path="/test-mini-gpt-3/image" element={<ImageVariatiorForm />}/>
+          <Route path="/test-mini-gpt-3/contact" element={<div>Contact us</div>}/>
+          <Route path="*" element={<ErrorPage />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

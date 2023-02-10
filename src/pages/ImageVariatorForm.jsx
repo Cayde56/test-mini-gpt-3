@@ -1,7 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import axios from "axios";
-import ImageTable from "./ImageTable";
-import { Context } from "./Context";
+import ImageTable from "../components/ImageTable";
+import { Context } from "../context/Context";
 import fs from "fs";
 
 export function ImageVariatiorForm() {

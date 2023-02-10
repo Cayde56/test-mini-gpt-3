@@ -1,10 +1,12 @@
+import { NavLink } from "react-router-dom";
+
 export function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
       <div className="container">
-        <a className="navbar-brand" href="/">
+        <NavLink className="navbar-brand" to="/test-mini-gpt-3/">
           Mini GPT-3{" "}
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -19,19 +21,19 @@ export function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="ms-auto navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <NavLink className="nav-link" to="/test-mini-gpt-3/">
                 Traductor
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/image">
+              <NavLink className="nav-link" to="/test-mini-gpt-3/image">
                 Crear variación de imágen
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link " href="/contact">
+              <NavLink className="nav-link " to="/test-mini-gpt-3/contact">
                 Contacto
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

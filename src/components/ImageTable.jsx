@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "./Context";
+import { Context } from "../context/Context";
 
 function ImageTable() {
   const { urls } = useContext(Context);
